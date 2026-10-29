@@ -1,0 +1,30 @@
+{
+  "name": "taskframework",
+  "version": "1.0.0",
+  "description": "Playwright, TypeScript and Cucumber BDD automation framework",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "npm run test:bdd",
+    "test:bdd": "node scripts/run-cucumber.js",
+    "test:ui": "node scripts/run-cucumber.js --tags @ui",
+    "test:api": "node scripts/run-cucumber.js --tags @api",
+    "test:playwright": "playwright test",
+    "test:all": "npm run test:bdd && npm run test:playwright",
+    "report:open": "playwright show-report reports/playwright",
+    "typecheck": "tsc --noEmit",
+    "clean": "node -e \"for (const p of ['reports/cucumber-report.html','reports/cucumber-report.json','reports/playwright','reports/logs','screenshots','traces','videos']) require('node:fs').rmSync(p,{recursive:true,force:true})\""
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@cucumber/html-formatter": "^21.8.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "dotenv": "^16.6.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

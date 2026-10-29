@@ -1,0 +1,11 @@
+{
+  "flight": {
+    "source": "Hyderabad",
+    "sourceCode": "HYD",
+    "destination": "Bengaluru",
+    "destinationCode": "BLR",
+    "adults": 2,
+    "children": 1,
+    "dateOffsetDays": 14
+  }
+}

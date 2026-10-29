@@ -1,0 +1,23 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/.playwright-mcp/
+.env
+.env.*
+!.env.example
+.auth/
+/dist/
+/reports/*
+!/reports/.gitkeep
+/reports/playwright-artifacts/
+/screenshots/*
+!/screenshots/.gitkeep
+/traces/*
+!/traces/.gitkeep
+/videos/*
+!/videos/.gitkeep
